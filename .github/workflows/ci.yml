@@ -12,6 +12,9 @@ jobs:
     log_test:
         runs-on: ubuntu-latest
         steps:
+            - name: "Checkout"
+              uses: actions/checkout@v4
+
             - name: "Log básico"
               run: echo "Disparado com sucesso!"
 
@@ -21,6 +24,9 @@ jobs:
                   echo "Branch: ${{ github.ref_name }}"
                   echo "Autor: ${{ github.actor }}"
                   echo "Commit: ${{ github.sha }}"
+
+            - name: "Exibindo diretórios"
+              run: ls -la
 
             - name: "Encerramento"
               run: |
