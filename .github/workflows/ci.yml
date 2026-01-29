@@ -14,3 +14,15 @@ jobs:
         steps:
             - name: "Log básico"
               run: echo "Disparado com sucesso!"
+
+            - name: "Log de Contexto"
+              run: |
+                  echo "Repositorio: ${{ github.repository }}"
+                  echo "Branch: ${{ github.ref_name }}"
+                  echo "Autor: ${{ github.actor }}"
+                  echo "Commit: ${{ github.sha }}"
+
+            - name: "Encerramento"
+              run: |
+                  echo "Pipeline executado com sucesso!"
+                  echo "Encerrando..."
