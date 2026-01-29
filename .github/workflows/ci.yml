@@ -1,0 +1,14 @@
+# Nome do workflow
+name: Primeiro CI de teste
+
+# Declara eventos que disparam o workflow
+on:
+    - push
+
+# Declara o que será executado
+jobs:
+    log_test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Log básico"
+              run: echo "Disparado com sucesso!"
