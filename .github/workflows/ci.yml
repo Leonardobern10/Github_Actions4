@@ -28,6 +28,11 @@ jobs:
             - name: "Exibindo diretórios"
               run: ls -la
 
+            - name: "Conteudo de .github/workflows"
+              run: |
+                  cd .github/workflows
+                  ls -la
+
             - name: "Encerramento"
               run: |
                   echo "Pipeline executado com sucesso!"
