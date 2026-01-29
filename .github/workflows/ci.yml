@@ -3,7 +3,9 @@ name: Primeiro CI de teste
 
 # Declara eventos que disparam o workflow
 on:
-    - push
+    push:
+        branches:
+            - dev
 
 # Declara o que será executado
 jobs:
